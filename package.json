@@ -7,6 +7,7 @@
     "starter"
   ],
   "main": "src/index.js",
+  "homepage": "http://Ruthvik94.github.io/React_Context/",
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/data-grid": "4.0.0-alpha.27",
@@ -21,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
@@ -30,6 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/preset-react": "^7.13.13"
+    "@babel/preset-react": "^7.13.13",
+    "gh-pages": "^3.1.0"
   }
 }

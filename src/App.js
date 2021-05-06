@@ -1,9 +1,10 @@
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Switch,
   Redirect,
 } from "react-router-dom";
+import { Container } from "@material-ui/core";
 
 import Context from "./Components/Context";
 import HomePage from "./Components/HomePage";
@@ -16,16 +17,18 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/Home" component={HomePage} />
-        <Route path="/About" component={AboutPage} />
-        <Route path="/Service" component={ServicePage} />
-        <Route path="/Contract" component={ContractPage} />
-        <Route path="/Not-Found" component={NotFound} />
-        <Route path="/" exact component={Context} />
-        <Redirect to="/Not-Found" />
-      </Switch>
-    </Router>
+    <Container>
+      <Router>
+        <Switch>
+          <Route path="/Home" component={HomePage} />
+          <Route path="/About" component={AboutPage} />
+          <Route path="/Service" component={ServicePage} />
+          <Route path="/Contract" component={ContractPage} />
+          <Route path="/Not-Found" component={NotFound} />
+          <Route path="/" exact component={Context} />
+          <Redirect to="/Not-Found" />
+        </Switch>
+      </Router>
+    </Container>
   );
 }
